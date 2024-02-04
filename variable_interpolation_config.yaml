@@ -1,0 +1,13 @@
+server:
+  host: localhost
+  port: 80
+client:
+  url: http://${server.host}:${server.port}
+  server_port: ${server.port}
+  description: Client of ${.url}
+
+selected_plan: A
+plans:
+ A: plan A
+ B: plan B
+plan: ${plans[${selected_plan}]}
